@@ -1,0 +1,19 @@
+{
+   "type": "postgres",
+   "host": "localhost",
+   "port": 5432,
+   "username": "postgres",
+   "password": "postgres",
+   "database": "node-orm-db",
+   "synchronize": true,
+   "logging": false,
+   "entities": [
+      "src/entities/**/*.ts"
+   ],
+   "subscribers": [
+    "src/subscriber/*.js"
+  ],
+  "migrations": [
+    "src/migration/*.js"
+  ]
+}

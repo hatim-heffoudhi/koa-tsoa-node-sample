@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/server.ts",
+    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/server.ts",
     "tsoa": "tsoa",
     "swagger-codegen": "java -jar ../swagger-codegen/modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i swagger-def/v1/swagger.yaml -l typescript-angular -o ../frontend/src/app/swagger/v1 --additional-properties ngVersion=6"
   },
@@ -21,6 +21,7 @@
     "koa2-swagger-ui": "^2.9.2",
     "pg": "^7.4.3",
     "tsoa": "^2.1.5",
+    "typeorm": "^0.2.7",
     "typescript-ioc": "^1.2.4"
   },
   "devDependencies": {

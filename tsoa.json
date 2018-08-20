@@ -1,0 +1,16 @@
+{
+  "swagger": {
+    "outputDirectory": "./swagger-def/v1",
+    "entryFile": "./src/server.ts",
+    "host": "localhost:3000",
+    "basePath": "/v1",
+    "yaml": true
+  },
+  "routes": {
+    "basePath": "/v1",
+    "entryFile": "./src/server.ts",
+    "routesDir": "./src",
+    "middleware": "koa"
+  }
+}
+

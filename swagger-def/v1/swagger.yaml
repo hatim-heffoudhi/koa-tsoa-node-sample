@@ -1,0 +1,51 @@
+basePath: /v1
+consumes:
+    - application/json
+definitions:
+    User:
+        properties:
+            id:
+                type: number
+                format: double
+            lastName:
+                type: string
+            firstName:
+                type: string
+            birthdate:
+                type: string
+                format: date-time
+            comment:
+                type: string
+        required:
+            - id
+            - lastName
+            - firstName
+            - birthdate
+            - comment
+        type: object
+info:
+    title: koa-tsoa-node-sample
+    version: 1.0.0
+    license:
+        name: ISC
+paths:
+    /users:
+        get:
+            operationId: GetUsers
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/User'
+            description: 'Charge la liste des alertes.'
+            security: []
+            parameters: []
+produces:
+    - application/json
+swagger: '2.0'
+securityDefinitions: {}
+host: 'localhost:3000'
